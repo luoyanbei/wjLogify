@@ -15,3 +15,39 @@ wjLogify对Logify的代码做了简单修改，更好的展示一个方法的开
 如果上一句无效，可添加sudo，如下：
 
     sudo chmod +x /path/to/wjLogify.pl
+
+#打印范例：
+
+-[<RsaCGIWrapLogic: 0x17063be60> stopLogic]
+
+[WXTui.xm:121] -- 开始执行 - (void)stopLogic
+
+-[<RsaCGIWrapLogic: 0x17063be60> m_uiEventID]
+
+[WXTui.xm:112] -- 开始执行 - (unsigned long )m_uiEventID
+
+[WXTui.xm:112] -- - (unsigned long )m_uiEventID 的返回值 = 20
+
+[WXTui.xm:112] -- 结束执行 - (unsigned long )m_uiEventID
+
+-[<RsaCertMgr: 0x1712431e0> removeRSAProtobufEvent:20]
+
+[WXTui.xm:72] -- 开始执行 - (void)removeRSAProtobufEvent:(unsigned long)arg1
+
++[<RsaCertMgr: 0x103bd0000> getExtKeyFromEventID:20]
+
+[WXTui.xm:64] -- 开始执行 + (id)getExtKeyFromEventID:(unsigned long)arg1
+
+[WXTui.xm:64] -- + (id)getExtKeyFromEventID:(unsigned long)arg1 的返回值 = 20
+
+[WXTui.xm:64] -- 结束执行 + (id)getExtKeyFromEventID:(unsigned long)arg1
+
+-[<RsaCertMgr: 0x1712431e0> safeRemoveRsaCGIWrapForKey:20]
+
+[WXTui.xm:73] -- 开始执行 - (void)safeRemoveRsaCGIWrapForKey:(id)arg1
+
+[WXTui.xm:73] -- 结束执行 - (void)safeRemoveRsaCGIWrapForKey:(id)arg1
+
+[WXTui.xm:72] -- 结束执行 - (void)removeRSAProtobufEvent:(unsigned long)arg1
+
+[WXTui.xm:121] -- 结束执行 - (void)stopLogic
